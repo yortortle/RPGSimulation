@@ -3,25 +3,26 @@ using namespace std;
 
 class Spell
 {
-protected: 
+public:
 	float dmg = 0;
+	string name;
 
 	//I don't necessarily get an error when I don't intialize these member variables immediately, and I don't see a reason to. Why does it warn me here when I plan on intializing them later on?
 
-	float AgiModifier;
-	float FireModifier;
-	float ChaosModifier;
-	float DarkModifier;
-	float FrostModifier;
-	float SpellModifier;
-	float RuneModifier;
-	float MomentumModifier;
+	float AgiModifier = 0.f;
+	float FireModifier = 0.f;
+	float ChaosModifier = 0.f;
+	float DarkModifier = 0.f;
+	float FrostModifier = 0.f;
+	float SpellModifier = 0.f;
+	float RuneModifier = 0.f;
+	float MomentumModifier = 0.f;
 
 protected:
 	Spell(Person& person)
 	{
 		//cout << "spell has been called" << endl;
-		person.printStats();
+		//person.printStats();
 	}
 	virtual ~Spell()
 	{
@@ -33,9 +34,10 @@ public:
 	{
 		return dmg;
 	}
-	string spellsay() const 
+
+	const string getName()
 	{
-		return "say";
+		return name;
 	}
 
 	float calculateDmg(Person& person)
@@ -66,7 +68,7 @@ public:
 	{
 		//cout << "ice barrage has been called" << endl;
 		//cout << "num?" << endl;
-
+		name = "IceBarrage";
 		AgiModifier = .7f;
 		FireModifier = .8f;
 		ChaosModifier = 1.2f;
@@ -76,6 +78,7 @@ public:
 		RuneModifier = 1.0f;
 		MomentumModifier = 1.7f;
 
+		//declares the damage modifiers then calculates the maximum damage of the spell using these in the constructor.
 		calculateDmg(person);
 	}
 	~IceBarrage() override
@@ -91,6 +94,7 @@ public:
 	IceBlitz(Person& person)
 		: Spell{ person }
 	{
+		name = "Ice Blitz";
 		AgiModifier = 1.2f;
 		FireModifier = .8f;
 		ChaosModifier = 1.4f;
@@ -111,6 +115,7 @@ public:
 	FireWave(Person& person)
 		: Spell{ person }
 	{
+		name = "Fire Wave";
 		AgiModifier = 0.8f;
 		FireModifier = 2.0f;
 		ChaosModifier = 1.2f;
@@ -131,6 +136,7 @@ public:
 	FireDance(Person& person)
 		: Spell{ person }
 	{
+		name = "Fire Dance";
 		AgiModifier = 2.0f;
 		FireModifier = 1.5f;
 		ChaosModifier = 0.8f;
@@ -151,6 +157,7 @@ public:
 	DarkDash(Person& person)
 		: Spell{ person }
 	{
+		name = "Dark Dash";
 		AgiModifier = 2.0f;
 		FireModifier = 0.5f;
 		ChaosModifier = 1.6f;
@@ -171,6 +178,7 @@ public:
 	DarkPrism(Person& person)
 		: Spell{ person }
 	{
+		name = "Dark Prism";
 		AgiModifier = 0.5f;
 		FireModifier = 1.5f;
 		ChaosModifier = 1.0f;
@@ -191,6 +199,7 @@ public:
 	WindChant(Person& person)
 		: Spell{ person }
 	{
+		name = "Wind Chant";
 		AgiModifier = 2.0f;
 		FireModifier = 1.2f;
 		ChaosModifier = 0.5f;
@@ -211,6 +220,7 @@ public:
 	WindSlide(Person& person)
 		: Spell{ person }
 	{
+		name = "Wind Slide";
 		AgiModifier = 1.2f;
 		FireModifier = 1.8f;
 		ChaosModifier = 1.0f;

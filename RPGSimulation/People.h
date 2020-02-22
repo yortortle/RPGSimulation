@@ -111,7 +111,7 @@ public:
 	CosmicCat(const string& chosenName, const int& chosenLevel)
 		: Person{ chosenName, chosenLevel }
 	{
-		cout << "nyaa~" << endl;
+		//cout << "nyaa~" << endl;
 		Agility = 80.f;
 		Firebending = 50.f;
 		Chaos = 50.f;
@@ -181,7 +181,7 @@ public:
 	Cthulu(const string& chosenName, const int& chosenLevel)
 		: Person{ chosenName, chosenLevel }
 	{
-		cout << "nyaa~" << endl;
+		//cout << "nyaa~" << endl;
 		Agility = 30.f;
 		Firebending = 30.f;
 		Chaos = 90.f;

@@ -4,11 +4,15 @@
 #include "Spells.h";
 using namespace std;
 
-string chosenChar1;
-string chosenChar2;
-string chosenSpell1;
-string chosenSpell2;
+Spell* ChosenSpell1;
+Spell* ChosenSpell2;
+
+string chosenChar;
 string option;
+
+Spell* randSpell(int rand, Person person);
+void chosenCharacter(string chosenChar);
+void setSpell(Person &person);
+void getSpells();
 void getCharacters();
-void interaction(Spell &spell1, Spell &spell2);
 
