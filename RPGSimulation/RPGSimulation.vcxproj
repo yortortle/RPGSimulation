@@ -142,7 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="People.h" />
-    <ClInclude Include="Focus.h" />
+    <ClInclude Include="Interaction.h" />
     <ClInclude Include="Spells.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

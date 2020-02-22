@@ -23,10 +23,10 @@
     <ClInclude Include="Spells.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Focus.h">
+    <ClInclude Include="People.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="People.h">
+    <ClInclude Include="Interaction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
