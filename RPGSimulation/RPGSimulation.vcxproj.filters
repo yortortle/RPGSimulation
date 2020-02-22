@@ -29,5 +29,8 @@
     <ClInclude Include="Interaction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Declarations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

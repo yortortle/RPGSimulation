@@ -141,6 +141,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Declarations.h" />
     <ClInclude Include="People.h" />
     <ClInclude Include="Interaction.h" />
     <ClInclude Include="Spells.h" />

@@ -15,7 +15,7 @@ public:
 	float RuneCraft;
 	float Momentum;
 	
-protected:
+public:
 	//because chosenClass is entered once and I do not want it to change, it's (potentially) good practice to use a const to avoid further error and to take it in by reference to avoid copying it.
 	Person(const string& chosenName, const int chosenLevel)
 		: name{ chosenName }, Level{chosenLevel}

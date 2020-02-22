@@ -5,20 +5,60 @@
 #include "People.h";
 #include "Spells.h";
 #include "People.h";
+#include "Declarations.h";
 using namespace std;
 
 int main()
 {
+	cout << "Would you like to view list of characters, view list of spells, or set up your interaction" << endl;
+	cin >> option;
 
-	Person* Bladee;
-	Bladee = 
+	getCharacters();
+}
 
+//must pass in as reference
+void interaction(Spell &SpellOne, Spell &SpellTwo)
+{
 
 }
 
-void interaction(Person person, Spell spell)
+void selection()
 {
 
+}
+
+void getCharacters()
+{
+	// function which generates a vector of pointers and iterates through the vector to find the names and stats of the characters and delete the pointers freeing up the heap memory.
+	//can't tell if this is good or bad to be honest. It sure gets the job done and the memory is freed up right as it's called.
+	//There must be a better way to do something like this, wanted practice with making a vector of pointers to base class. Kind of enjoy the idea of it.
+	Person* bladeptr = new Bladee("Bladee", 10);
+	Person* drainPtr = new DrainGang("DrainGang", 10);
+	Person* FrostPtr = new FrostPunk("FrostPunk", 10);
+	Person* cosmicPtr = new CosmicCat("Cosmic Cat", 10);
+	Person* deliberatePtr = new DeliberateDan("Dan", 10);
+	Person* salvePtr = new Salve("Hero", 10);
+	Person* gendoPtr = new IkariGendo("Gendo", 10);
+	Person* cthuluPtr = new Cthulu("Bladee", 10);
+
+	vector<Person*> peopleVector;
+
+	peopleVector.push_back(bladeptr);
+	peopleVector.push_back(drainPtr);
+	peopleVector.push_back(FrostPtr);
+	peopleVector.push_back(cosmicPtr);
+	peopleVector.push_back(deliberatePtr);
+	peopleVector.push_back(salvePtr);
+	peopleVector.push_back(gendoPtr);
+	peopleVector.push_back(cthuluPtr);
+
+	cout << "The names of available characters are: " << endl;
+	for (int i = 0; i < peopleVector.size(); i++)
+	{
+		cout << peopleVector[i]->getName() << endl;
+		peopleVector[i]->printStats();
+		delete peopleVector[i];
+	}
 }
 
 //simulating damage curve in games with class selection, class attributes, and damage modifiers for specific spells that may or may not synergize with those classes.
