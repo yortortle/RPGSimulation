@@ -9,13 +9,16 @@ using namespace std;
 
 int main()
 {
-	Bladee jeff("Jeff", 1000);
-	IceBarrage bladeeBarrage(jeff);
-	cout << bladeeBarrage.getDamage() << endl;
-	
-	DrainGang troy("troy", 1000);
-	IceBarrage troyBarrage(troy);
-	cout << troyBarrage.getDamage() << endl;
+
+	Person* Bladee;
+	Bladee = 
+
+
+}
+
+void interaction(Person person, Spell spell)
+{
+
 }
 
 //simulating damage curve in games with class selection, class attributes, and damage modifiers for specific spells that may or may not synergize with those classes.
@@ -39,9 +42,9 @@ int main()
 //initiliazer list - check
 //passing in objects to declare a second object - check
 //function which takes in references to objects.
-//try to use const when I can and references when I need to
+//try to use const when I can and references when I need to - check
 //use a vector, make sure not to copy data when iterating to save memory.
-//complicated damage formulas and interactions
+//complicated damage formulas and interactions - check somewhat
 //library object which takes in a vector and has functions like (display spells, display people, etc);
 
 //function which takes in a const reference to a vector and prints list of spells and their attributes
