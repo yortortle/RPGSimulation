@@ -20,7 +20,7 @@ protected:
 	Person(const string& chosenName, const int chosenLevel)
 		: name{ chosenName }, Level{chosenLevel}
 	{
-		cout << "person has been called" << endl;
+		//cout << "person has been called" << endl;
 		Agility = 0.f;
 		Firebending = 0.f;
 		Chaos = 0.f;
@@ -32,7 +32,7 @@ protected:
 	}
 	virtual ~Person()
 	{
-		cout << "person has been destroyed" << endl;
+		//cout << "person has been destroyed" << endl;
 	}
 
 public:
@@ -57,7 +57,7 @@ public:
 	Bladee(const string& chosenName, const int& chosenLevel)
 		: Person{ chosenName, chosenLevel }
 	{
-		cout << "drain :]]]" << endl;
+		//cout << "drain :]]]" << endl;
 		Agility = 35.f;
 		Firebending = 60.f;
 		Chaos = 70.f;
@@ -67,22 +67,16 @@ public:
 		RuneCraft = 30.f;
 		Momentum = 45.f;
 	}
-
-	~Bladee() override
-	{
-		cout << "bladee has been destroyed" << endl;
-	}
 };
 
-class Drain : public Person
+class DrainGang : public Person
 {
 public:
-	//honestly not sure exactly what effect i'm getting by setting int& and string&
-	//as the arguments, is that to avoid copying new variables and save memory? Is this best practice? Needs more study.
-	Drain(const string& chosenName, const int& chosenLevel)
+	//need more study on using references and const in parameter list
+	DrainGang(const string& chosenName, const int& chosenLevel)
 		: Person{ chosenName, chosenLevel }
 	{
-		cout << "draiiiiin" << endl;
+		//cout << "draiiiiin" << endl;
 		Agility = 70.f;
 		Firebending = 35.f;
 		Chaos = 40.f;
@@ -92,11 +86,116 @@ public:
 		RuneCraft = 40.f;
 		Momentum = 35.f;
 	}
+};
 
-	~Drain() override
+class FrostPunk : public Person
+{
+public:
+	FrostPunk(const string& chosenName, const int& chosenLevel)
+		: Person{ chosenName, chosenLevel }
 	{
-		cout << "Drain Gang :(" << endl;
+		Agility = 60.f;
+		Firebending = 20.f;
+		Chaos = 50.f;
+		Darkness = 55.f;
+		FrostWork = 70.f;
+		SpellCraft = 35.f;
+		RuneCraft = 30.f;
+		Momentum = 70.f;
 	}
 };
+
+class CosmicCat : public Person
+{
+public:
+	CosmicCat(const string& chosenName, const int& chosenLevel)
+		: Person{ chosenName, chosenLevel }
+	{
+		cout << "nyaa~" << endl;
+		Agility = 80.f;
+		Firebending = 50.f;
+		Chaos = 50.f;
+		Darkness = 30.f;
+		FrostWork = 30.f;
+		SpellCraft = 50.f;
+		RuneCraft = 50.f;
+		Momentum = 50.f;
+	}
+};
+
+class DeliberateDan : public Person
+{
+public:
+	DeliberateDan(const string& chosenName, const int& chosenLevel)
+		: Person{ chosenName, chosenLevel }
+	{
+		//cout << "Take your life seriously" << endl;
+		Agility = 50.f;
+		Firebending = 75.f;
+		Chaos = 75.f;
+		Darkness = 75.f;
+		FrostWork = 30.f;
+		SpellCraft = 30.f;
+		RuneCraft = 40.f;
+		Momentum = 50.f;
+	}
+};
+
+class Salve : public Person
+{
+public:
+	Salve(const string& chosenName, const int& chosenLevel)
+		: Person{ chosenName, chosenLevel }
+	{
+		Agility = 80.f;
+		Firebending = 35.f;
+		Chaos = 35.f;
+		Darkness = 30.f;
+		FrostWork = 60.f;
+		SpellCraft = 75.f;
+		RuneCraft = 75.f;
+		Momentum = 50.f;
+	}
+};
+
+class IkariGendo : public Person
+{
+public:
+	IkariGendo(const string& chosenName, const int& chosenLevel)
+		: Person{ chosenName, chosenLevel }
+	{
+		Agility = 50.f;
+		Firebending = 75.f;
+		Chaos = 90.f;
+		Darkness = 75.f;
+		FrostWork = 35.f;
+		SpellCraft = 40.f;
+		RuneCraft = 30.f;
+		Momentum = 45.f;
+	}
+};
+
+class Cthulu : public Person
+{
+public:
+	Cthulu(const string& chosenName, const int& chosenLevel)
+		: Person{ chosenName, chosenLevel }
+	{
+		cout << "nyaa~" << endl;
+		Agility = 30.f;
+		Firebending = 30.f;
+		Chaos = 90.f;
+		Darkness = 90.f;
+		FrostWork = 30.f;
+		SpellCraft = 30.f;
+		RuneCraft = 30.f;
+		Momentum = 20.f;
+	}
+};
+
+
+
+
+
 
 

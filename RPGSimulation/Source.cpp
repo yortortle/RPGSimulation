@@ -5,8 +5,18 @@
 #include "People.h";
 #include "Spells.h";
 #include "People.h";
-
 using namespace std;
+
+int main()
+{
+	Bladee jeff("Jeff", 1000);
+	IceBarrage bladeeBarrage(jeff);
+	cout << bladeeBarrage.getDamage() << endl;
+	
+	DrainGang troy("troy", 1000);
+	IceBarrage troyBarrage(troy);
+	cout << troyBarrage.getDamage() << endl;
+}
 
 //simulating damage curve in games with class selection, class attributes, and damage modifiers for specific spells that may or may not synergize with those classes.
 //You will be able to make a character object which corresponds to class selection
@@ -22,12 +32,12 @@ using namespace std;
 //not fully understand as i'm doing this, that's okay, it's to practice and understand; upon reflection it will make more sense.
 
 //goals:
-//implement virtual functions
+//implement virtual functions - check
 //pure virtual function
-//virtual destructors
-//proper constructors
-//initiliazer list
-//passing in objects to object declaration
+//virtual destructors - check
+//proper constructors - check
+//initiliazer list - check
+//passing in objects to declare a second object - check
 //function which takes in references to objects.
 //try to use const when I can and references when I need to
 //use a vector, make sure not to copy data when iterating to save memory.
@@ -36,13 +46,3 @@ using namespace std;
 
 //function which takes in a const reference to a vector and prints list of spells and their attributes
 
-int main()
-{
-	Bladee jeff("Jeff", 1000);
-	IceBarrage bladeeBarrage(jeff);
-	cout << bladeeBarrage.getDamage() << endl;
-	
-	Drain troy("troy", 1000);
-	IceBarrage troyBarrage(troy);
-	cout << troyBarrage.getDamage() << endl;
-}

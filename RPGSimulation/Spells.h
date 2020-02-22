@@ -20,12 +20,12 @@ protected:
 protected:
 	Spell(Person& person)
 	{
-		cout << "spell has been called" << endl;
+		//cout << "spell has been called" << endl;
 		person.printStats();
 	}
 	virtual ~Spell()
 	{
-		cout << "spell has been destroyed" << endl;
+		//cout << "spell has been destroyed" << endl;
 	}
 
 public:
@@ -64,8 +64,8 @@ public:
 	IceBarrage(Person& person)
 		: Spell{ person }
 	{
-		cout << "ice barrage has been called" << endl;
-		cout << "num?" << endl;
+		//cout << "ice barrage has been called" << endl;
+		//cout << "num?" << endl;
 
 		AgiModifier = .7f;
 		FireModifier = .8f;
@@ -80,7 +80,7 @@ public:
 	}
 	~IceBarrage() override
 	{
-		cout << "ice barrage has been destroyed" << endl;
+		//cout << "ice barrage has been destroyed" << endl;
 	}
 };
 
